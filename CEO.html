@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Biodata Noripan</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f8;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#1e3c72;
+    padding:10px 0;
+    z-index:1000;
+}
+
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav ul li{
+    margin:5px 15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+}
+
+/* SECTION */
+section{
+    padding:90px 20px 60px;
+    max-width:900px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1,h2{
+    color:#1e3c72;
+}
+
+.center{
+    text-align:center;
+}
+
+/* FOTO PROFIL */
+.profile-img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #1e3c72;
+    margin-bottom:15px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+}
+
+td{
+    padding:6px;
+}
+
+.label{
+    font-weight:bold;
+    width:35%;
+}
+
+/* LIST */
+ul{
+    margin-left:20px;
+}
+
+/* LINK */
+a{
+    color:#1e3c72;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e3c72;
+    color:white;
+}
+/* ===== NAVBAR MODERN (RAPI) ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#1e3c72;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px 0;
+    z-index:1000;
+}
+
+/* LIST MENU */
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:6px; /* JARAK ANTAR MENU DIPERKECIL */
+    margin:0;
+    padding:0;
+}
+
+/* LINK MENU */
+.navbar ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:6px 10px; /* LEBIH RINGKAS */
+    border-radius:18px;
+    transition:0.3s ease;
+    font-size:14px;
+}
+
+/* HOVER ELEGAN */
+.navbar ul li a:hover{
+    background:white;
+    color:#1e3c72;
+    box-shadow:0 0 8px rgba(255,255,255,0.6);
+    transform:translateY(-1px);
+}
+
+/* HAMBURGER */
+.menu-toggle{
+    position:absolute;
+    right:20px;
+    display:none;
+    font-size:26px;
+    color:white;
+    cursor:pointer;
+}
+
+/* MODE HP */
+@media(max-width:768px){
+    .navbar{
+        justify-content:space-between;
+        padding:10px 20px;
+    }
+
+    .navbar ul{
+        position:absolute;
+        top:55px;
+        left:0;
+        width:100%;
+        background:#1e3c72;
+        flex-direction:column;
+        align-items:center;
+        display:none;
+        gap:0;
+    }
+
+    .navbar ul li{
+        width:100%;
+        text-align:center;
+    }
+
+    .navbar ul li a{
+        display:block;
+        width:100%;
+        padding:12px;
+        border-radius:0;
+    }
+
+    .navbar ul.show{
+        display:flex;
+        animation:slideDown 0.4s;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+}
+
+/* ANIMASI */
+@keyframes slideDown{
+    from{opacity:0; transform:translateY(-10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+/* JUDUL ELEGAN */
+.section-title{
+    text-align:center;
+    margin-bottom:25px;
+    position:relative;
+}
+
+.section-title h2{
+    display:inline-block;
+    padding:0 15px;
+    background:white;
+    position:relative;
+    z-index:2;
+}
+
+.section-title::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height:2px;
+    background:linear-gradient(to right, transparent, #1e3c72, transparent);
+    z-index:1;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav class="navbar">
+    <div class="logo"></div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#data">Data Diri</a></li>
+        <li><a href="#tentang">Tentang Saya</a></li>
+        <li><a href="#keahlian">Keahlian</a></li>
+        <li><a href="#pkl">PKL</a></li>
+        <li><a href="#target">Target</a></li>
+        <li><a href="#motivasi">Motivasi</a></li>
+        <li><a href="#sosmed">Sosial</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <div class="card center">
+        <img src="Gambar WhatsApp 2026-01-13 pukul 20.54.10_5252d954.jpg" class="profile-img" alt="Foto Noripan">
+        <h1>Noripan</h1>
+        <p>
+            Selamat datang di website pribadi saya.  
+            Saya adalah pelajar SMKN 1 Hanau jurusan TKJ yang memiliki minat
+            di bidang teknologi, komputer, dan dunia bisnis.
+        </p>
+        <p><b>"Belajar hari ini untuk menjadi pemimpin di masa depan."</b></p>
+    </div>
+</section>
+
+<!-- DATA DIRI -->
+<section id="data">
+    <div class="card">
+        <h2>Data Diri</h2>
+        <table>
+            <tr><td class="label">Nama</td><td>: Noripan</td></tr>
+            <tr><td class="label">Sekolah</td><td>: SMKN 1 Hanau</td></tr>
+            <tr><td class="label">Kelas/Jurusan</td><td>: (XII) Teknik Komputer Dan Jaringan</td></tr>
+            <tr><td class="label">Umur</td><td>: 19 Tahun</td></tr>
+            <tr><td class="label">Tempat/Tanggal Lahir</td><td>: Paring Raya 10 Oktober 2007</td></tr>
+        </table>
+    </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang">
+    <div class="card">
+        <h2>Tentang Saya & Hobi</h2>
+        <p>
+            Saya adalah siswa jurusan Teknik Komputer dan Jaringan (TKJ) yang
+            memiliki ketertarikan pada dunia teknologi, komputer, dan pengembangan diri.
+        </p>
+
+        <p><b>Hobi saya:</b></p>
+        <ul>
+            <li>Pramuka</li>
+            <li>Kemah</li>
+            <li>Ngoprek komputer</li>
+            <li>Belajar IT</li>
+            <li>Mengoleksi parfum</li>
+        </ul>
+
+        <p><b>Cita-cita saya:</b></p>
+        <ul>
+            <li>Menjadi <b>CEO</b> kayak di DRACIN</li>
+            <li>Membahagiakan orang tua</li>
+            <li>Menjadi pribadi yang lebih baik dan masuk surga</li>
+            <li>Menjadi <b>perfume collector</b> karena saya menyukai parfum</li>
+        </ul>
+    </div>
+</section>
+<!-- KEAHLIAN -->
+<section id="keahlian">
+    <div class="card">
+        <h2>Keahlian</h2>
+
+        <p>
+            Sebagai siswa jurusan Teknik Komputer dan Jaringan (TKJ),
+            saya memiliki beberapa keahlian dasar yang terus saya kembangkan
+            melalui pembelajaran di sekolah, praktik mandiri, dan pengalaman PKL.
+        </p>
+
+        <p><b>Keahlian teknis yang saya miliki antara lain:</b></p>
+        <ul>
+            <li>Instalasi dan konfigurasi sistem operasi Windows</li>
+            <li>Instalasi dan pengelolaan berbagai software pendukung</li>
+            <li>Perakitan, perawatan, dan troubleshooting komputer</li>
+            <li>Servis dan perawatan printer berbagai jenis</li>
+            <li>Konfigurasi jaringan LAN dasar (kabel & perangkat jaringan)</li>
+            <li>Pemahaman dasar HTML & CSS untuk pembuatan website</li>
+        </ul>
+
+        <p>
+            Selain keahlian teknis, saya juga berusaha mengembangkan
+            <b>soft skill</b> seperti kedisiplinan, tanggung jawab,
+            kerja sama tim, dan komunikasi yang baik.
+        </p>
+
+        <p>
+            Ke depan, saya berkomitmen untuk terus belajar dan meningkatkan
+            kemampuan agar siap menghadapi dunia kerja maupun dunia usaha
+            di bidang teknologi.
+        </p>
+    </div>
+</section>
+
+<!-- PKL -->
+<section id="pkl">
+    <div class="card">
+        <h2>Pengalaman Praktik Kerja Lapangan (PKL)</h2>
+
+        <p>
+            Saya melaksanakan Praktik Kerja Lapangan (PKL) di
+            <b>CV Gratia Computer – Pangkalan Bun</b>, sebuah perusahaan yang bergerak
+            di bidang <b>servis dan penjualan perangkat komputer</b>.
+        </p>
+
+        <p>
+            Selama menjalani PKL, saya mendapatkan banyak pengalaman dan
+            pembelajaran langsung di dunia kerja, khususnya di bidang
+            teknologi informasi dan pelayanan pelanggan.
+        </p>
+
+        <p><b>Kegiatan dan pengalaman yang saya peroleh selama PKL:</b></p>
+        <ul>
+            <li>Melakukan servis dan perawatan printer berbagai merek</li>
+            <li>Membantu servis CPU, komputer rakitan, dan All In One PC</li>
+            <li>Melakukan instalasi sistem operasi dan software pendukung</li>
+            <li>Mengenal serta mengidentifikasi sparepart komputer dan printer</li>
+            <li>Membantu proses penjualan printer, monitor, dan hardware komputer</li>
+            <li>Belajar cara melayani pelanggan dengan baik dan profesional</li>
+        </ul>
+
+        <p>
+            Melalui kegiatan PKL ini, saya menjadi lebih memahami dunia kerja,
+            meningkatkan keterampilan teknis, serta melatih sikap disiplin,
+            tanggung jawab, dan kerja sama tim.
+        </p>
+    </div>
+</section>
+<!-- TARGET MASA DEPAN -->
+<section id="target">
+    <div class="card">
+        <h2>Target & Rencana Masa Depan</h2>
+
+        <p>
+            Saya memiliki beberapa target dan rencana yang ingin saya capai
+            sebagai bentuk komitmen untuk terus berkembang dan menjadi pribadi
+            yang lebih baik di masa depan.
+        </p>
+
+        <ul>
+            <li>Menyelesaikan pendidikan di SMKN 1 Hanau dengan hasil terbaik</li>
+            <li>Meningkatkan keterampilan di bidang komputer dan teknologi</li>
+            <li>Bekerja atau berwirausaha di bidang IT</li>
+            <li>Membahagiakan orang tua dan keluarga</li>
+            <li>Menjadi <b>CEO</b> dan membangun usaha sendiri di bidang teknologi</li>
+            <li>Menjadi pribadi yang bermanfaat dan diridhai Allah</li>
+        </ul>
+    </div>
+</section>
+<!-- MOTIVASI -->
+<section id="motivasi">
+    <div class="card center">
+        <h2>Quote & Motivasi Hidup</h2>
+
+        <p style="font-size:18px;">
+            <i>
+            "Kesuksesan tidak datang dari siapa yang paling pintar,
+            tetapi dari siapa yang mau belajar, berusaha, dan tidak menyerah."
+            </i>
+        </p>
+
+        <p style="font-size:18px;">
+            <i>
+            "Jangan takut memulai dari nol, karena dari nol kita belajar
+            arti perjuangan dan proses yang sebenarnya."
+            </i>
+        </p>
+
+        <p style="font-size:18px;">
+            <i>
+            "Hidup bukan tentang siapa yang paling hebat,
+            tetapi tentang bagaimana kita bisa menjadi versi terbaik
+            dari diri kita sendiri dan membahagiakan orang tua."
+            </i>
+        </p>
+
+        <p style="margin-top:20px;">
+            <b>— Noripan</b>
+        </p>
+    </div>
+</section>
+
+
+<!-- SOSMED -->
+<section id="sosmed">
+    <div class="card center">
+        <h2>Media Sosial</h2>
+
+        <p>
+            Selain aktif belajar dan mengembangkan diri di dunia teknologi,
+            saya juga aktif di media sosial sebagai sarana berbagi aktivitas,
+            pengalaman, dan keseharian saya.
+        </p>
+
+        <p>
+            Melalui media sosial, saya berharap dapat terhubung dengan banyak
+            orang, memperluas relasi, serta saling berbagi hal-hal positif.
+        </p>
+
+        <p><b>Silakan kunjungi dan ikuti akun media sosial saya:</b></p>
+
+        <p>
+            📸 <a href="https://www.instagram.com/nrpan_ma" target="_blank">
+                Instagram Noripan
+            </a>
+            <br><br>
+            🎵 <a href="https://www.tiktok.com/@nr_pann" target="_blank">
+                TikTok Noripan
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 | Noripan - XII TKJ
+</footer>
+
+</body>
+</html>
